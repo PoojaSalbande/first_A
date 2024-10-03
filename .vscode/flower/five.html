@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yes or No Buttons</title>
+    <style>
+        body {
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Ensure roses stay within viewport */
+        }
+        .container {
+            text-align: center;
+            z-index: 1;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button#yes-button:hover {
+            background-color: green;
+            color: white;
+        }
+        button#no-button:hover {
+            background-color: red;
+            color: white;
+        }
+        .rose {
+            position: absolute;
+            z-index: 0;
+            animation: float 4s infinite;
+        }
+        @keyframes float {
+            from {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-1000px) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+    <script>
+        function handleYesClick() {
+            for (let i = 0; i < 20; i++) {
+                createRose();
+            }
+        }
+
+        function createRose() {
+            const rose = document.createElement('img');
+            rose.src = 'flower3.jpeg'; // Replace with the path to your rose image or use an online URL
+            rose.className = 'rose';<!DOCTYPE html>
+            <html>
+            <head>
+                <title>Yes or No Buttons</title>
+                <style>
+                    body {
+                        background-color: pink;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        margin: 0;
+                        font-family: Arial, sans-serif;
+                        overflow: hidden; /* Ensure roses stay within viewport */
+                    }
+                    .container {
+                        text-align: center;
+                        z-index: 1;
+                    }
+                    button {
+                        margin: 10px;
+                        padding: 10px 20px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                    }
+                    button#yes-button:hover {
+                        background-color: green;
+                        color: white;
+                    }
+                    button#no-button:hover {
+                        background-color: red;
+                        color: white;
+                    }
+                    .rose {
+                        position: absolute;
+                        z-index: 0;
+                        animation: float 4s infinite;
+                    }
+                    @keyframes float {
+                        from {
+                            transform: translateY(0) scale(1);
+                            opacity: 1;
+                        }
+                        to {
+                            transform: translateY(-1000px) scale(1.5);
+                            opacity: 0;
+                        }
+                    }
+                </style>
+                <script>
+                    function handleYesClick() {
+                        for (let i = 0; i < 20; i++) {
+                            createRose();
+                        }
+                    }
+            
+                    function createRose() {
+                        const rose = document.createElement('img');
+                        rose.src = 'rose.png'; // Replace with the path to your rose image or use an online URL
+                        rose.className = 'rose';
+                        const size = Math.random() * 50 + 30 + 'px';
+                        rose.style.width = size;
+                        rose.style.height = size;
+                        rose.style.left = Math.random() * 100 + 'vw';
+                        rose.style.top = Math.random() * 100 + 'vh';
+                        document.body.appendChild(rose);
+            
+                        rose.addEventListener('animationend', () => {
+                            rose.remove();
+                        });
+                    }
+                </script>
+            </head>
+            <body>
+                <div class="container">
+                    <h1>Choose an Option</h1>
+                    <button id="yes-button" onclick="handleYesClick()">Yes</button>
+                    <button id="no-button" onclick="window.location.href='https://www.example.com'">No</button> <!-- Replace with the URL of the new page -->
+                    <br><br>
+                    <img src="static_rose.png" alt="Static Rose" /> <!-- Replace with the path to your static rose image -->
+                </div>
+            </body>
+            </html>
+            
+            const size = Math.random() * 50 + 30 + 'px';
+            rose.style.width = size;
+            rose.style.height = size;
+            rose.style.left = Math.random() * 100 + 'vw';
+            rose.style.top = Math.random() * 100 + 'vh';
+            document.body.appendChild(rose);
+
+            rose.addEventListener('animationend', () => {
+                rose.remove();
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose an Option</h1>
+        <button id="yes-button" onclick="handleYesClick()">Yes</button>
+        <button id="no-button" onclick="window.location.href='https://www.example.com'">No</button> <!-- Replace with the URL of the new page -->
+    </div>
+</body>
+</html>
